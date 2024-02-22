@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/fasilkom.png" type="Texture" id=3]
 
 [node name="Root" type="Node2D"]
+
+[node name="Fasilkom" type="Sprite" parent="."]
+position = Vector2( 515, 57 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
 
 [node name="Ground" parent="." instance=ExtResource( 1 )]
 position = Vector2( 507.708, 363.86 )
@@ -12,3 +19,18 @@ position = Vector2( 789.149, 294.054 )
 
 [node name="Ground3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 225.95, 294.562 )
+
+[node name="Ground4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 46, 52 )
+
+[node name="Ground5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 974, 56 )
+
+[node name="Ground6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 709, -147 )
+
+[node name="Ground7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 294, -147 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 356, 40 )
