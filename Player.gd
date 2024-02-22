@@ -1,10 +1,5 @@
 extends KinematicBody2D
 
-var normalSprite = preload("res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_idle.png")
-var crouchSprite = preload("res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_duck.png")
-var jumpSprite = preload("res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_jump.png")
-var fallSprite = preload("res://assets/kenney_platformercharacters/PNG/Adventurer/Poses/adventurer_fall.png")
-
 export (int) var speed = 400
 export (int) var jump_speed = -600
 export (int) var GRAVITY = 1200
