@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Ground.tscn" type="PackedScene" id=1]
+
+[node name="Root" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource( 1 )]
+position = Vector2( 507.708, 363.86 )
+
+[node name="Ground2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 789.149, 294.054 )
+
+[node name="Ground3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 225.95, 294.562 )

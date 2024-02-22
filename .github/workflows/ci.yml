@@ -1,0 +1,16 @@
+---
+name: Continuous Integration (CI)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  static-checks:
+    name: Static checks
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - uses: Scony/godot-gdscript-toolkit@4.2.2
+      - run: gdformat --check scenes/
+      - run: gdlint scenes/
