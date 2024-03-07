@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/radio-static-6382.mp3-465beb6b4c5b4bbd100eefdd621a5c3e.mp3str"
+
+[deps]
+
+source_file="res://radio-static-6382.mp3"
+dest_files=[ "res://.import/radio-static-6382.mp3-465beb6b4c5b4bbd100eefdd621a5c3e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

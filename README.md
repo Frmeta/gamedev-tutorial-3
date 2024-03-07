@@ -67,3 +67,11 @@ Fitur tambahan yang saya kerjakan:
   else:
     $SpriteParent/Sprite.play("walk")
   ```
+
+## Tutorial 5
+Proses pengerjaan Tutorial 5:
+- pertama saya membuat satu objek baru di dalam permainan berupa animasi enemy 'Skull'. Caranya mendownload spritesheet dari itch.io kemudian membuat `Animated Sprite` dan add frames from Spritesheet.
+![Skull Idle Spritesheet](/Idle%201%20(52x54).png)
+- Saya menambahkan suara baru: jump ketika meloncat, land ketika mendarat, dan explosion ketika mendorong enemy. Saya menggunakan AudioStreamPlayer untuk mengeluarkan SFX tersebut
+- Selain itu saya juga menambahkan background music menggunakan AudioStreamPlayer
+- Terakhir saya membuat radio yang terdengar suara apabila player mendekati radio tersebut menggunakan AudioStreamPlayer2D

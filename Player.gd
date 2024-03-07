@@ -5,12 +5,16 @@ export (int) var jump_speed = -600
 export (int) var GRAVITY = 1200
 export (float) var delay_press_twice = 0.2
 
+onready var audio_stream_player = $AudioStreamPlayer
+
 const UP = Vector2(0,-1)
 var velocity = Vector2()
 var jump_count = 0
 
 var delay_left = 0
 var delay_right = 0
+
+var is_on_floor_prev = false
 
 func get_input():
 	velocity.x = 0
@@ -34,6 +38,7 @@ func get_input():
 			if jump_count > 0:
 				jump_count -= 1
 				velocity.y = jump_speed
+				audio_stream_player.play_jump()
 			
 	
 		# dash
@@ -67,10 +72,14 @@ func get_input():
 				$SpriteParent/Sprite.play("fall")
 			else:
 				$SpriteParent/Sprite.play("jump")
+		elif not is_on_floor_prev:
+			audio_stream_player.play_land()
 		elif velocity.x == 0:
 			$SpriteParent/Sprite.play("idle")
 		else:
 			$SpriteParent/Sprite.play("walk")
+			
+		is_on_floor_prev = is_on_floor()
 			
 			
 			
@@ -85,3 +94,8 @@ func _physics_process(delta):
 	if position.y > 1000:
 		position = Vector2(500, 0)
 		velocity.y = 0
+
+
+func _on_Area2D_body_entered(body):
+	if body.is_in_group("enemy"):
+		audio_stream_player.play_explosion()
